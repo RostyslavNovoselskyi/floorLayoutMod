@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "997d22c9-3788-4662-b7c5-8989c95942c3",
+		"name": "FloorLayout",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Floors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"room\":[ \r\n        {\"x\": 2,\"y\": 1},\r\n        {\"x\": 0,\"y\": 0},\r\n        {\"x\": 1,\"y\": 3},\r\n        {\"x\": 1,\"y\": 2}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/floor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"floor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coordinates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/draw",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"draw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
