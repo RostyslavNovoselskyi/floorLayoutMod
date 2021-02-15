@@ -58,7 +58,6 @@ public class FloorController {
         }
 
         int listSize = listX.size();
-        int count = 0;
 
         for (int i = 1; i < countOfCoordinates -1; i++) {
             if (listX.size() == listY.size() && listX.size() >= MIN_SIZE){
@@ -71,27 +70,19 @@ public class FloorController {
                     if (listY.get(i) > listY.get(i-1) &&
                             listX.get(i) < listX.get(i+1)
                     ){
-                        System.out.println("Up");
-                        count++;
                     }
                     else if (listY.get(i) < listY.get(i-1) &&
                             (listX.get(i) < listX.get(i+1) ||
                             listX.get(i) > listX.get(i+1))
                     ){
-                        System.out.println("Down");
-                        count++;
                     }else if (listX.get(i) > listX.get(i-1) &&
 //                            (listY.get(i) < listY.get(i+1) ||
                             listY.get(i) > listY.get(i+1)
                     ){
-                        System.out.println("right");
-                        count++;
                     }else if (listX.get(i) < listX.get(i-1) &&
                             listY.get(i) < listY.get(i+1)
 //                            listY.get(i) > listY.get(i+1))
                     ){
-                        System.out.println("left");
-                        count++;
                     }else {
                         answer = ILLEGAL + NOT_CLOCKWISE;
                         bool = false;
